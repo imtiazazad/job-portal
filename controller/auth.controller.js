@@ -6,14 +6,14 @@ exports.signup = async (req, res) => {
         const user = await signupService(req.body);
 
         res.status(200).json({
-            status: "Success",
-            message: "Successfully created account",
+            status: "Successful",
+            message: "Successfully Created Account",
             data: user
         })
     } catch (error) {
         res.status(400).json({
-            status: "Fail",
-            message: "Couldn't create account",
+            status: "Failed",
+            message: "Couldn't Create Account",
             error: error.message
         })
     }
@@ -25,8 +25,8 @@ exports.login = async (req, res) => {
 
         if (!email || !password) {
             return res.status(401).json({
-                status: "fail",
-                error: "Please provide all your credentials"
+                status: "failed",
+                error: "Please Provide All Your Credentials"
             });
         }
 
@@ -34,8 +34,8 @@ exports.login = async (req, res) => {
 
         if (!user) {
             return res.status(401).json({
-                status: "Fail",
-                message: "No user found please create a account"
+                status: "Failed",
+                message: "No User Found Please Create a Account"
             })
         }
 
@@ -43,8 +43,8 @@ exports.login = async (req, res) => {
 
         if (!isPasswordValid) {
             return res.status(401).json({
-                status: "fail",
-                message: "Password is not valid"
+                status: "failed",
+                message: "Password Is not Valid"
             })
         }
 
@@ -52,7 +52,7 @@ exports.login = async (req, res) => {
         const { password: pwd, ...others } = user.toObject();
 
         res.status(200).json({
-            status: "Success",
+            status: "Successful",
             message: "Successfully Login",
             data: {
                 token
@@ -60,7 +60,7 @@ exports.login = async (req, res) => {
         })
     } catch (error) {
         res.status(500).json({
-            status: "fail",
+            status: "failed",
             message: "Couldn't Login",
             error: error.message
         })
@@ -72,12 +72,12 @@ exports.getMe = async (req, res) => {
         const user = await findUserByEmailService(req.user?.email);
 
         res.status(200).json({
-            status: "Success",
+            status: "Successful",
             data: user
         })
     } catch (error) {
         res.status(500).json({
-            status: "fail",
+            status: "failed",
             message: "Couldn't Login",
             error: error.message
         })

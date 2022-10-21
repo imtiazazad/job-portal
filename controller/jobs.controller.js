@@ -135,14 +135,14 @@ exports.applyToJob = async (req, res) => {
         const applied = await getAppliedJob(newObject);
 
         res.status(200).json({
-            status: "Success",
-            message: "Successfully applied to job",
+            status: "Successful",
+            message: "Successfully Applied to Job",
             data: applied
         })
     } catch (error) {
         res.status(400).json({
-            status: "fail",
-            message: "Couldn't apply to job",
+            status: "failed",
+            message: "Couldn't Apply to Job",
             error: error.message
         })
     }

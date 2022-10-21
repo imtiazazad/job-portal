@@ -12,14 +12,14 @@ exports.getJobs = async (req, res) => {
         const managerJobs = await findSpecificJobs(req.user);
 
         res.status(200).json({
-            status: "Success",
-            message: "Successfully fetched jobs",
+            status: "Successful",
+            message: "Successfully Fetched Jobs",
             data: managerJobs
         });
     } catch (error) {
         res.status(400).json({
-            status: "Fail",
-            message: "Couldn't get jobs",
+            status: "Failed",
+            message: "Couldn't Get Jobs",
             error: error.message
         })
     }

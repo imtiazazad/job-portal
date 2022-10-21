@@ -7,7 +7,7 @@ exports.verifyToken = async (req, res, next) => {
 
         if (!token) {
             return res.status(401).json({
-                status: "fail",
+                status: "failed",
                 message: "Your not  logged in"
             })
         }
