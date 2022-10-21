@@ -1,0 +1,31 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.5",
+    "validator": "^13.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbdurrahmanTalha/acc-final-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/AbdurrahmanTalha/acc-final-assignment/issues"
+  },
+  "homepage": "https://github.com/AbdurrahmanTalha/acc-final-assignment#readme",
+  "description": ""
+}
